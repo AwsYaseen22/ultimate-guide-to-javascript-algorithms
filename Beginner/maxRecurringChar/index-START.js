@@ -23,10 +23,24 @@ function maxRecurringChar(text) {
   return maxChar;
 }
 
-console.log(maxRecurringChar("aabbbccddddd"));
-
 // function maxRecurringChar(text) {
-//     // Code goes here
+//   let maxVal = 0;
+//   let obj = {};
+//   let charArr = [];
+//   let valArr = [];
+//   for (const l of text) {
+//     if (obj.hasOwnProperty(l)) {
+//       obj[l]++;
+//     } else {
+//       obj[l] = 1;
+//     }
+//   }
+//   charArr = Object.keys(obj);
+//   valArr = Object.values(obj);
+//   maxVal = Math.max(...valArr);
+//   return charArr[valArr.indexOf(maxVal)];
 // }
+
+// console.log(maxRecurringChar("aabbbbbbbbccddddd"));
 
 module.exports = maxRecurringChar;
