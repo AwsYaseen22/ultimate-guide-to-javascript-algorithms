@@ -4,6 +4,7 @@ return the equivalent of the sentence when capitalised. E.g
   capSentence('the tales of scotch!') // would return 'The Tales Of Scotch!' 
 */
 
+// SECOND
 // function capSentence(text) {
 //   let arr = text.toLowerCase().split(" ");
 //   let capsArr = [];
@@ -13,6 +14,7 @@ return the equivalent of the sentence when capitalised. E.g
 //   return capsArr.join(" ");
 // }
 
+// FASTEST
 // function capSentence(text) {
 //   let arr = text.toLowerCase().split(" ");
 //   let capsArr = arr.map((w) => {
@@ -21,6 +23,7 @@ return the equivalent of the sentence when capitalised. E.g
 //   return capsArr.join(" ");
 // }
 
+// SLOWEST
 function capSentence(text) {
   let arr = text.toLowerCase().split(" ");
   let capsArr = arr.map((w) => {
