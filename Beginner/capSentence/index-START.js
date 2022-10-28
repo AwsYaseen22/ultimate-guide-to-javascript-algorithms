@@ -13,15 +13,22 @@ return the equivalent of the sentence when capitalised. E.g
 //   return capsArr.join(" ");
 // }
 
+// function capSentence(text) {
+//   let arr = text.toLowerCase().split(" ");
+//   let capsArr = arr.map((w) => {
+//     return w[0].toUpperCase() + w.slice(1);
+//   });
+//   return capsArr.join(" ");
+// }
+
 function capSentence(text) {
   let arr = text.toLowerCase().split(" ");
   let capsArr = arr.map((w) => {
-    return w[0].toUpperCase() + w.slice(1);
+    return w.replace(w[0], w[0].toUpperCase());
   });
   return capsArr.join(" ");
 }
 
-f;
 console.log(capSentence("the tales of scotch!"));
 
 module.exports = capSentence;
