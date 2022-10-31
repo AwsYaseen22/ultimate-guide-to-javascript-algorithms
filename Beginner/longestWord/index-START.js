@@ -15,15 +15,19 @@ Amendment => return longest word
 //   return longest;
 // }
 
+// function longestWord(text) {
+//   return text.split(" ").reduce((acc, cur) => {
+//     if (cur.length > acc.length) {
+//       acc = cur;
+//     }
+//     return acc;
+//   }, "");
+// }
+
 function longestWord(text) {
-  return text.split(" ").reduce((acc, cur) => {
-    if (cur.length > acc.length) {
-      acc = cur;
-    }
-    return acc;
-  }, "");
+  return text.split(" ").sort((a, b) => b.length - a.length)[0];
 }
 
-console.log(longestWord("Top Shelf Web Development Training on Scotch"));
+// console.log(longestWord("Top Shelf Web Development Training on Scotch"));
 
 module.exports = longestWord;
