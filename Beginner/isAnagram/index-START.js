@@ -5,11 +5,19 @@ don't. E.g
     isAnagram('silent', 'listen') // should return true
 */
 
-
+const sanitizeString = function (str) {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z]/g, "")
+    .split("")
+    .sort()
+    .join("");
+};
 
 function isAnagram(stringA, stringB) {
-    // Code goes here
+  return sanitizeString(stringA) === sanitizeString(stringB);
 }
 
+console.log(isAnagram("silent", "listen"));
 
-module.exports = isAnagram
+module.exports = isAnagram;
